@@ -49,7 +49,7 @@ final class VersionGetter extends AbstractOperator
 
         $childResult = $c->getLabeledValue($element);
         $isArrayType = $childResult->isArrayType ?? null;
-        $childValues = $childResult->value;
+        $childValues = $childResult->value ?? null;
         if ($childValues && !$isArrayType) {
             $childValues = [$childValues];
         }

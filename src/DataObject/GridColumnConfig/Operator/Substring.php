@@ -83,7 +83,7 @@ final class Substring extends AbstractOperator
                     $valueArray[] = $childValue;
                 }
             } else {
-                $valueArray[] = $childResult->value;
+                $valueArray[] = $childResult->value ?? null;
             }
 
             $result->isArrayType = $isArrayType;

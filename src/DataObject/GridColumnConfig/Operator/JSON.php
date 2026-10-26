@@ -46,7 +46,7 @@ final class JSON extends AbstractOperator
 
             $childResult = $c->getLabeledValue($element);
 
-            $childValues = $childResult->value;
+            $childValues = $childResult->value ?? null;
             $isArrayType = is_array($childValues);
 
             if ($childValues && !is_array($childValues)) {

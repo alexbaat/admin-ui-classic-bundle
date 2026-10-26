@@ -50,7 +50,7 @@ final class StringReplace extends AbstractOperator
             foreach ($children as $c) {
                 $childResult = $c->getLabeledValue($element);
 
-                $childValues = $childResult->value;
+                $childValues = $childResult->value ?? null;
                 if ($childValues && !is_array($childValues)) {
                     $childValues = [$childValues];
                 }

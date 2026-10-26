@@ -41,7 +41,7 @@ final class Anonymizer extends AbstractOperator
 
         foreach ($children as $c) {
             $childResult = $c->getLabeledValue($element);
-            $childValues = $childResult->value;
+            $childValues = $childResult->value ?? null;
 
             if ($childValues) {
                 if ($this->mode === 'md5') {

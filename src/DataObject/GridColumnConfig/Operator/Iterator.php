@@ -42,7 +42,7 @@ final class Iterator extends AbstractOperator
             foreach ($element as $element) {
                 $childResult = $c->getLabeledValue($element);
 
-                $valueArray[] = $childResult->value ? $childResult->value : null;
+                $valueArray[] = !empty($childResult->value) ? $childResult->value : null;
             }
 
             $result->value = $valueArray;
