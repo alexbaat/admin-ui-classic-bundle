@@ -574,7 +574,8 @@ class TranslationController extends AdminAbstractController
                         continue;
                     }
                 } else {
-                    if (!$isAllowedNonLanguage && !$isLanguageField) {
+                    // language columns are filtered via a join + HAVING in language mode
+                    if (!$isAllowedNonLanguage) {
                         continue;
                     }
                 }
